@@ -2,3 +2,17 @@
 
 Underscore Contrib
 * http://documentcloud.github.io/underscore-contrib/
+
+The Lo-Dash on Underscore.js and Strings
+* http://blog.falafel.com/the-lo-dash-on-underscorejs-and-strings/
+
+What About Strings?
+There isn’t any strings manipulation in Underscore, which is a big oversight in my opinion. Fortunately, 
+Underscore has a great plugin system and probably the most useful Underscore.js plugin is Underscore.strings. 
+With it you can truncate, trim, humanize, capitalize, prune, pad, and so much more with strings. 
+You can even merge the strings plugin into the Underscore namespace like this:
+_.mixin(_s.exports());
+That way, your Underscore namespace has been extended with the functions from the strings plugin. 
+You will magically have new functions for Underscore like this:
+_.ltrim(mystring, '?')
+The function “ltrim” isn’t part of Underscore.js, but actually part of Underscore.strings.
